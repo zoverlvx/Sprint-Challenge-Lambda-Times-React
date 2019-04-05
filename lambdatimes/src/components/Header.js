@@ -15,35 +15,29 @@ const HeaderDiv = styled.div`
 	@media (min-width: 1280px) {
 		width: 1280px;
 	}
-`;
-
-{/*This h1 doesn't seem to be correct even though it matches the css*/}
-const HeaderH1 = styled.h1`
-	font-size: 60px;
-    font-family: Didot, serif;
-    font-weight: bold;
-    flex: 8;
-    text-align: center;
-    color: #000;
-`;
-
-const HeaderSpanDate = styled.span`
-	align-self: flex-end;
-	font-size: 11px;
-	font-weight: bold;
-	letter-spacing: 1px;
-	margin-left: 25px;
-	flex: 1;
-`;
-
-const HeaderSpanTemp = styled.span`
-	align-self: flex-end;
-	font-size: 11px;
-	font-weight: bold;
-	letter-spacing: 1px;
-	text-align: right;
-	margin-right: 25px;
-	flex: 1;
+	h1 {
+		font-size: 60px;
+    	font-family: Didot, serif;
+    	font-weight: bold;
+    	flex: 8;
+    	text-align: center;
+    	color: #000;
+	}
+	span {
+		align-self: flex-end;
+		font-size: 11px;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+	span.date {
+		margin-left: 25px;
+		flex: 1;
+	}
+	span.temp {
+		text-align: right;
+		margin-right: 25px;
+		flex: 1;
+	}
 `;
 
 // Refactor this component to use styled components and not classNames. 
@@ -52,9 +46,9 @@ const HeaderSpanTemp = styled.span`
 const Header = () => {
   return (
     <HeaderDiv>
-      <HeaderSpanDate>SMARCH 32, 2018</HeaderSpanDate>
-      <HeaderH1>Lambda Times</HeaderH1>
-      <HeaderSpanTemp>98°</HeaderSpanTemp>
+      <span className="date">SMARCH 32, 2018</span>
+      <h1>Lambda Times</h1>
+      <span className="temp">98°</span>
     </HeaderDiv>
   )
 }
