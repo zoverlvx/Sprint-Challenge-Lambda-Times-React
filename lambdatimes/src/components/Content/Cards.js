@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from "prop-types";
 import Card from './Card';
 
 const Cards = props => {
-	console.log("props for cards", props)
   return (
     <div className="cards-container">
       {/* Using the cards prop, map over the list creating a 
